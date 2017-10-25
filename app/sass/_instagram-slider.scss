@@ -1,0 +1,55 @@
+/*---------- instagramm-slider ----------*/
+.instagramm-slider {
+  position: relative;
+  width: 100%;
+
+  .swiper-slide {
+    overflow: hidden;
+    display: block;
+    position: relative;
+    height: 25vw;
+
+    > span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: transform .3s ease-in-out;
+    }
+
+    &:hover {
+
+      > span {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .instagramm-slider {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .instagramm-slider {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .instagramm-slider {
+
+  }
+}
+@media (min-width: $desktop) {
+  .instagramm-slider {
+
+    .swiper-slide { height: calc(100vw/5) }
+  }
+}
+/*---------- /instagramm-slider ---------*/
+

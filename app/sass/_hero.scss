@@ -1,0 +1,179 @@
+/*---------- hero ----------*/
+.hero {
+  position: relative;
+  width: 100vw;
+  margin-bottom: 20px;
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 300px;
+    padding: 70px 20px 50px 57px;
+
+    .logo,
+    .btn { display: none }
+  }
+
+  &__layout {
+    overflow: hidden;
+    position: relative;
+    height: 290px;
+    width: calc(100vw - 113px);
+    top: -85px;
+    left: 113px;
+    background-color: #fff;
+
+    &:before {
+      position: absolute;
+      top: -14px;
+      left: -30px;
+      transform: rotate(270deg);
+      color: #F8F8F8;
+      font-size: 232px;
+      line-height: 272px;
+      letter-spacing: 9px;
+      content: attr(data-text);
+      @include title();
+    }
+  }
+
+  &__gadgets { display: none }
+
+  &__list {
+    position: absolute;
+    top: 26px;
+    left: 56px;
+    width: 114px;
+    color: #3F4551;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    @include subtitle-medium();
+
+    li { margin-bottom: 20px }
+  }
+
+  &__scroll-down {
+    position: absolute;
+    top: 549px;
+    left: 50%;
+    transform-origin: left;
+    transform: rotate(270deg);
+    color: #3F4551;
+    font-size: 10px;
+    line-height: 13px;
+    opacity: .75;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    @include subtitle-medium();
+  }
+}
+@media (min-width: $phone-landscape) {
+  .hero {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .hero {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    height: 737px;
+    margin-bottom: 55px;
+
+    &__description {
+      width: 51%;
+      height: auto;
+      padding: 200px 138px 88px;
+
+      .logo {
+        display: block;
+        margin-bottom: 28px;
+        font-size: 24px;
+        line-height: 27px;
+      }
+
+      .btn {
+        display: inline-flex;
+        left: 3px;
+      }
+    }
+
+    &__layout {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+      width: 48.7%;
+      height: auto;
+      top: auto;
+      left: auto;
+      padding: 8% 5%;
+      text-align: right;
+
+      &:before {
+        top: calc(100% - 687px);
+        left: 3px;
+        font-size: 732px;
+        line-height: 859px;
+        letter-spacing: 22px;
+        transform: rotate(0);
+      }
+    }
+
+    &__gadgets {
+      display: block;
+      position: relative;
+      color: #3F4551;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      @include subtitle-medium();
+
+      &:before {
+        display: inline-block;
+        width: 2px;
+        height: 20px;
+        margin-bottom: 20px;
+        background-color: #0300fd;
+        content: '';
+      }
+
+      li { margin-bottom: 20px }
+    }
+
+    &__list {
+      position: relative;
+      top: auto;
+      left: auto;
+      width: auto;
+
+      &:before {
+        display: inline-block;
+        width: 2px;
+        height: 20px;
+        margin-bottom: 20px;
+        background-color: #0300fd;
+        content: '';
+      }
+
+      li { margin-bottom: 20px }
+    }
+
+    &__scroll-down {
+      top: 657px;
+      left: calc(50% - 2px);
+      opacity: 1;
+      letter-spacing: 2.2px;
+    }
+  }
+}
+/*---------- /hero ---------*/
