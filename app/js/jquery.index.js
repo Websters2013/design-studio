@@ -39,7 +39,6 @@
                 var delay = .5,
                     startTimeLine = new TimelineMax({
                     onComplete: function(){
-                        console.log('complete');
                         $('body').removeClass('no-scrolling');
                     }
                 });
@@ -738,7 +737,6 @@
 
         //public methods
         _self.setCanUseScroll = function ( param ) {
-            console.log('setCanUse');
             _canUseSmoothScroll = param;
         };
 
