@@ -258,6 +258,7 @@
 
 }
 
+.case + .contact-us,
 .cases + .contact-us{
   margin-bottom: 0;
 
@@ -509,19 +510,9 @@
 
   }
 
+  .case + .contact-us,
   .cases + .contact-us {
     position: relative;
-
-    &:before{
-      position: absolute;
-      left: 50%;
-      bottom: calc( 100% + 41px );
-      width: 1px;
-      height: 100px;
-      background-color: #3F4551;
-      transform: translateX( -50% );
-      content: '';
-    }
 
     p{
       max-width: 350px;
@@ -546,6 +537,22 @@
     }
 
   }
+
+  .cases + .contact-us {
+
+    &:before{
+      position: absolute;
+      left: 50%;
+      bottom: calc( 100% + 41px );
+      width: 1px;
+      height: 100px;
+      background-color: #3F4551;
+      transform: translateX( -50% );
+      content: '';
+    }
+
+  }
+
 }
 
 @media (min-width: $desktop) {
@@ -572,4 +579,3 @@
   100% { transform: translate(0) }
 }
 /*---------- /cases ---------*/
-

@@ -2,9 +2,21 @@
 .case {
   padding: 90px 0 0;
 
-  img{
-    display: block;
-    width: 100%;
+  &__img{
+    position: relative;
+    height: 100vw;
+    overflow: hidden;
+
+    img{
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      max-height: 100%;
+      min-width: 100%;
+      transform: translate(-50%, -50%);
+    }
+
   }
 
   &__head {
@@ -44,6 +56,7 @@
 
     img{
       display: block;
+      width: 100%;
     }
 
   }
@@ -55,6 +68,7 @@
     font-size: 14px;
     line-height: 22px;
     letter-spacing: .1px;
+    background-color: #fff;
 
     a{
       color: #0200FF;
@@ -193,6 +207,7 @@
 
   &__prev,
   &__next {
+    display: none;
     height: 31px;
     width: 34px;
     z-index: 2;
@@ -205,6 +220,10 @@
 
     &.swiper-button-disabled{
       opacity: .25;
+    }
+
+    &.visible{
+      display: block;
     }
 
   }
@@ -261,7 +280,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      min-width: 100%;
+      width: 100%;
       min-height: 100%;
       transform: translate(-50%, -50%);
     }
@@ -283,6 +302,11 @@
   }
 
 }
+
+.contact-us{
+  padding-top: 81px;
+}
+
 @media (min-width: $phone-landscape) {
   .case {
 
@@ -333,6 +357,21 @@
 
     }
 
+    &__img{
+      height: auto;
+
+      img{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-width: 100%;
+        min-height: 0;
+        transform: translate( 0 );
+      }
+
+    }
+
     &__preview{
       position: relative;
       width: 65%;
@@ -343,7 +382,6 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        width: auto;
         min-width: 100%;
         min-height: 100%;
         transform: translate(-50%, -50%);
@@ -352,7 +390,7 @@
     }
 
     &__content{
-      padding: 203px calc( 50% - 285px) 70px;
+      padding: 200px calc( 50% - 285px) 70px;
       font-size: 16px;
       line-height: 30px;
 
@@ -361,6 +399,7 @@
       }
 
       h1{
+        margin-top: 0;
         margin-bottom: 123px;
         font-size: 55px;
         line-height: 56px;
@@ -419,7 +458,7 @@
       }
 
       &-small{
-        padding: 152px calc( 50% - 265px ) 199px;
+        padding: 200px calc( 50% - 265px ) 199px;
         text-align: center;
       }
 
@@ -494,6 +533,26 @@
     margin-bottom: 0!important;
   }
 
+  .contact-us {
+    padding-top: 135px;
+
+    &:before{
+      position: absolute;
+      left: 50%;
+      bottom: calc( 100% - 88px );
+      width: 1px;
+      height: 100px;
+      background-color: #3F4551;
+      transform: translateX( -50% );
+      content: '';
+    }
+
+    .message-field{
+      max-width: 350px;
+      margin: 0 auto;
+    }
+
+  }
+
 }
 /*---------- /case ---------*/
-
