@@ -143,4 +143,10 @@ function add_js() {
 
 	wp_enqueue_style('style');
 }
-?>
+
+function filter_wpcf7_ajax_json_echo( $items, $result ) {
+	$items['message'] = do_shortcode($items['message']);
+	return $items;
+};
+add_filter( 'wpcf7_ajax_json_echo', 'filter_wpcf7_ajax_json_echo', 10, 2 );
+
