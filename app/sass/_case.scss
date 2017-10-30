@@ -302,6 +302,11 @@
   }
 
 }
+
+.contact-us{
+  padding-top: 81px;
+}
+
 @media (min-width: $phone-landscape) {
   .case {
 
@@ -526,6 +531,22 @@
 
   .cases .btn.cases__btn{
     margin-bottom: 0!important;
+  }
+
+  .contact-us {
+    padding-top: 135px;
+
+    &:before{
+      position: absolute;
+      left: 50%;
+      bottom: calc( 100% - 88px );
+      width: 1px;
+      height: 100px;
+      background-color: #3F4551;
+      transform: translateX( -50% );
+      content: '';
+    }
+
   }
 
 }
