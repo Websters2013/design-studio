@@ -1,6 +1,6 @@
 <?php
 
-function bright_function($content = '') {
+function bright_function($attr, $content = '') {
 	return '<div class="article__content-bright"><p>'.$content.'</p></div>';
 }
 
@@ -8,10 +8,15 @@ function circle_function() {
 	return '<span class="case__split"></span>';
 }
 
+function strong_function($attr, $content = '') {
+	return '<strong>'.$content.'</strong>';
+}
+
 
 function register_shortcodes(){
 	add_shortcode('bright', 'bright_function');
 	add_shortcode('circle', 'circle_function');
+	add_shortcode('strong', 'strong_function');
 }
 function register_button( $buttons ) {
 	array_push( $buttons, "|", "bright" );
