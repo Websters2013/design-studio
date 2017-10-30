@@ -1186,14 +1186,20 @@
 
                 if ( _caseSlider.find( '.swiper-slide' ).length > 1 ) {
 
+                    var btnNext = _obj.find( '.case__next' ),
+                        btnPrev = _obj.find( '.case__prev' );
+
+                    btnPrev.addClass( 'visible' );
+                    btnNext.addClass( 'visible' );
+
                     _case = new Swiper ( _caseSlider, {
                         effect: 'slide',
                         autoplay: false,
                         speed: 500,
                         slidesPerView: 1,
                         loop: false,
-                        nextButton: _casesSlider.find( '.case__next' ),
-                        prevButton: _casesSlider.find( '.case__prev' ),
+                        nextButton: btnNext,
+                        prevButton: btnPrev,
                         onInit: function () {
 
                             var item = _caseSlider.find( '.swiper-slide' ),
