@@ -89,6 +89,43 @@
   }
 }
 
+div.wpcf7-mail-sent-ok{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 146px calc(50% - 85px) 0;
+  border: none;
+  background-color: #F5F5F5;
+  color: #3F4551;
+  @include main-font;
+  font-size: 14px;
+  line-height: 22px;
+
+  strong{
+    display: block;
+    position: relative;
+    @include subtitle-bold;
+    font-size: 39px;
+    line-height: 65px;
+
+    &:before{
+      position: absolute;
+      top: -27px;
+      left: 50%;
+      width: 5px;
+      height: 15px;
+      border-bottom: 2px solid #0200FF;
+      border-right: 2px solid #0200FF;
+      transform: translateX(-50%) rotate(45deg);
+      content: '';
+    }
+
+  }
+
+}
+
 @media (min-width: $phone-landscape) {
   .contact-us {
 
@@ -153,5 +190,10 @@
   .contact-us {
 
   }
+
+  div.wpcf7-mail-sent-ok{
+    top: 105px;
+  }
+
 }
 /*---------- /contact-us ---------*/
